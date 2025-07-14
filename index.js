@@ -1,6 +1,6 @@
 window.addEventListener("load", () => {
       const intro = document.getElementById("intro");
-      const content = document.getElementById("content");
+      const content = document.getElementById("site");
 
       setTimeout(() => {
         intro.style.opacity = 0;
@@ -11,5 +11,5 @@ window.addEventListener("load", () => {
           content.style.display = "block";
         }, 1000);
 
-      }, 3000);
+      }, 1000);
     });
