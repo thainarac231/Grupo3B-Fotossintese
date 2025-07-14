@@ -1,0 +1,40 @@
+body {
+    background-color: #0b0f0c;
+    color: #c9f7c1;
+    margin:  0;
+}
+
+nav {
+    margin-top: 1rem;
+}
+nav a {
+  color: #a2ffa2;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+    color: #16cf35;
+}
+
+header {
+    background-color: #132b13;
+    padding: 2px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 255, 100, 0.1);
+}
+header h1 {
+  font-size: 3px;
+  color: #72ff71;
+  margin: 0;
+}
+
+.imagem {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 2px auto;
+  border: 2px solid #5fe45f;
+  border-radius: 8px;
+}
