@@ -5,8 +5,11 @@ window.addEventListener("load", () => {
       setTimeout(() => {
         intro.style.opacity = 0;
         setTimeout(() => {
+          
           intro.style.display = "none";
+
           content.style.display = "block";
         }, 1000);
+
       }, 3000);
     });
