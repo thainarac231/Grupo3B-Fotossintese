@@ -2,6 +2,7 @@ body {
     background-color: #0b0f0c;
     color: #c9f7c1;
     margin:  0;
+    font-family: 'Roboto', sans-serif;
 }
 
 nav {
@@ -37,6 +38,7 @@ header h1 {
   margin: 2px auto;
   border: 2px solid #5fe45f;
   border-radius: 8px;
+ 
 }
 #intro {
   background-color: #0b0f0c;
@@ -48,4 +50,50 @@ header h1 {
   font-size: 3rem;
   font-weight: bold;
   transition: opacity 1s ease;
+}
+.destaque {
+  color: #7fff7f;
+  font-weight: bold;
+}
+main {
+ padding: 4px 2px;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: block;
+  content: "";
+  clear: both;
+}
+section {
+  margin-bottom: 3rem;
+}
+section h2 {
+  font-size: 29px;
+  border-left: 4px solid #72ff71;
+  padding-left: 7px;
+  color: #b4ffb2;
+}
+section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #d8ffd5;
+}
+.imagem-importancia {
+  float: right;
+  margin: 0 0 1rem 2rem; 
+  width: 300px;
+  border: 2px solid #72ff71;
+  border-radius: 10px;
+}
+
+
+
+
+
+
+
+.site {
+  display: none;
+}
+body:not(.skip-intro) #intro {
+  display: flex;
 }
