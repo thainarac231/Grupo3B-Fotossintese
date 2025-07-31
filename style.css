@@ -27,8 +27,19 @@ header {
   transform: translateY(-20px);
   animation: aparecer 1.5s ease-out forwards;
 }
+/* === SEÇÃO DE IMAGEM === */
+.imagem-ilustrativa {
+  text-align: center;
+  margin: 50px 0 40px;
+}
 
-/* === MENU DE NAVEGAÇÃO === */
+.imagem-ilustrativa img {
+  width: 90%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+
 nav {
   display: flex;
   justify-content: center;
@@ -93,21 +104,6 @@ li {
   color: #44926e;
 }
 
-/* === SEÇÃO DE IMAGEM === */
-.imagem-ilustrativa {
-  text-align: center;
-  margin: 50px 0 40px;
-}
-
-.imagem-ilustrativa img {
-  width: 90%;
-  max-width: 700px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-}
-
-/* === SUBTÍTULOS DESTACADOS === */
 .subtitulo-destaque {
   font-size: 32px;
   color: #2f855a;
@@ -162,115 +158,9 @@ footer {
   opacity: 0;
 }
 
-<<<<<<< HEAD
 .site {
   display: none;
 }
 body:not(.skip-intro) #intro {
   display: flex;
 }
-
-body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #1b5e20, #000000); /* Verde escuro → preto */
-  color: #c9f7c1; /* Letras brancas para contraste */
-  margin: 0;
-  padding: 20px;
-}
-
-nav {
-    margin-top: 1rem;
-}
-nav a {
-  color: #a2ffa2;
-  text-decoration: none;
-  margin: 0 1rem;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-nav a:hover {
-    color: #16cf35;
-}
-
-header {
-    background-color: #132b13;
-    padding: 2px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 255, 100, 0.1);
-}
-header h1 {
-  font-size: 3rem;
-  color: #72ff71;
-  margin: 0;
-}
-
-
-.container {
-  max-width: 900px;
-  margin: auto;
-  background: rgba(0,0,0,0.7);
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,255,0,0.2);
-}
-
-h1{
-  text-align: center;
-  font-size: 40px;
-  color: #72ff71;
-  margin-top: 20px;
-}
-
- h2 {
-  font-size: 24px;
-  color: #72ff71;
-  margin: 0;
-}
-
-
-p {
-  line-height: 1.6;
-  margin-bottom: 15px;
-}
-
-ul {
-  padding-left: 20px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-table, th, td {
-  border: 1px solid #c8e6c9;
-}
-
-th, td {
-  padding: 10px;
-  text-align: center;
-}
-
-th {
-  background-color: #054105;
-}
-
-code {
-  background-color: #284a01;
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-family: monospace;
-}
-=======
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-
-/* === ESCONDER CONTEÚDO DURANTE INTRO === */
-#site {
-  display: none;
-}
->>>>>>> a9bc3c34bae98a851180f902692bec74ad897893
