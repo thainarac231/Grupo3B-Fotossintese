@@ -69,6 +69,8 @@ nav a:hover {
 h2 {
   color: #08807e;
   margin-top: 30px;
+  font-size: 30px;
+
 }
 
 p {
@@ -89,7 +91,7 @@ li {
 
 .destaque {
   font-weight: bold;
-  color: #1e8698;
+  color:           #1e8698;
 }
 
 .subtitulo-destaque {
@@ -107,14 +109,17 @@ li {
 
 /* === RODAPÉ === */
 footer {
-  background-color: #0b5f2f;
-  color: white;
-  text-align: center;
+  background: linear-gradient(to right, #4caf50, #81c784); /* Degradê verde */
+  color: white; /* Texto branco */
   padding: 20px;
-  margin-top: 40px;
+  text-align: center;
+  border-radius: 20px 20px 0 0; /* Bordas arredondadas no topo */
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
+  font-size: 18px;
+  font-family: 'Arial', sans-serif;
 }
 
-/* === ANIMAÇÕES === */
+
 @keyframes aparecer {
   to {
     opacity: 1;
@@ -173,11 +178,7 @@ body:not(.skip-intro) #intro {
 ul {
   padding-left: 20px;
 }
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
+
 table,th,td {
   border: 1px solid #4f8b87;
 }
@@ -186,5 +187,16 @@ th,td {
   text-align: center;
 }
 th {
-  background-color: #8ec9d5;
+  background-color: #8ec9d5;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+
+footer {
+  background-color: #42eae1;
+  color: white;
+  padding: 15px;
+  text-align: center;
 }
