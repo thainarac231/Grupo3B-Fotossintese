@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Fredoka',sans-serif;
   background: linear-gradient(to bottom, #000000, #328286);
   color: #2f4f4f;
 }
@@ -132,21 +132,6 @@ footer {
   border-radius: 8px;
  
 }
-#intro {
-  background-color: #0b0f0c;
-  color: #72ff71;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  font-size: 3rem;
-  font-weight: bold;
-  transition: opacity 1s ease;
-}
-.destaque {
-  color: #7fff7f;
-  font-weight: bold;
-}
 main {
  padding: 4px 2px;
   max-width: 1000px;
@@ -177,7 +162,6 @@ section p {
   border-radius: 10px;
 }
 
-
 .site {
   display: none;
 }
@@ -204,7 +188,7 @@ nav a {
   transition: color 0.3s ease;
 }
 nav a:hover {
-    color: #16cf35;
+   color: #16cf35;
 }
 
 header {
