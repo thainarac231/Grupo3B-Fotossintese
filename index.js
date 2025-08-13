@@ -4,10 +4,10 @@ window.addEventListener("load", () => {
   const site = document.getElementById("site");
 
   setTimeout(() => {
-    intro.style.opacity = 0;
+    intro.style.opacity = 0; // começa a sumir
     setTimeout(() => {
-      intro.style.display = "none";
-      site.style.display = "block";
-    }, 1000); // espera 1 segundo para sumir totalmente
-  }, 2000); // mostra a intro por 2 segundos
+      intro.style.display = "none"; // remove
+      site.style.display = "block"; // mostra site
+    }, 1000); // espera o fade-out terminar
+  }, 1000); // tempo que a intro fica visível (2s)
 });

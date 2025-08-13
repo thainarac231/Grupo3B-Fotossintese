@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Fredoka', sans-serif;
-  background: linear-gradient(to bottom, #000000, #42eae1);
+  background: linear-gradient(to bottom, #000000, #328286);
   color: #2f4f4f;
 }
 
@@ -127,41 +127,6 @@ footer {
   }
 }
 
-/* === INTRO COM FUNDO PRETO === */
-#intro {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  transition: opacity 1s ease;
-  color: #72ff71;
-}
-
-.intro-title {
-  color: #38a169;
-  font-size: 48px;
-  font-family: 'Fredoka', sans-serif;
-  animation: fadeIn 1.5s ease-out forwards;
-  opacity: 0;
-}
-
-.site {
-  display: none;
-}
-body:not(.skip-intro) #intro {
-  display: flex;
-}
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
 .imagem-centralizada {
   text-align: center;
   margin-top: 50px;
@@ -187,16 +152,40 @@ th,td {
   text-align: center;
 }
 th {
-  background-color: #8ec9d5;
+  background-color:#8ec9d5;
 }
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin-top:20px;
+}
 
-footer {
-  background-color: #42eae1;
+#intro {
+  position: fixed;
+  inset: 0;
+  background: url('img/intro.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;  /* centraliza horizontalmente */
+  align-items: center;      /* centraliza verticalmente */
   color: white;
-  padding: 15px;
-  text-align: center;
+  font-size: 60px;
+  font-weight: 900;
+  -webkit-text-stroke: 2px white; /* contorno branco */
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.8); /* sombra para destacar */
+  font-family: 'Fredoka', sans-serif;
+}
+
+#intro h1 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 60px;
+  color: white;
+  text-shadow: 3px 3px 10px rgba(0,0,0,0.7);
+}
+@keyframes fadein {
+to{
+  opacity: 1;
+}
+}
+#site{
+  display: none;
 }
