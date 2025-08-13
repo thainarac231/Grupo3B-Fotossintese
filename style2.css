@@ -1,0 +1,361 @@
+/* === GERAL === */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fredoka', sans-serif;
+  background: linear-gradient(to bottom, #000000, #42eae1);
+  color: #2f4f4f;
+}
+
+/* === CABEÇALHO === */
+header {
+  background-image: url('fundo-cabecalho.jpg.jpeg');
+  background-size: cover;
+  background-position: center;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.titulo-principal {
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  margin: 0 0 10px;
+  padding: 10px;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: aparecer 1.5s ease-out forwards;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 6px 12px;
+ 
+  border-radius: 8px;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  background-color: #328286;
+  padding: 6px 12px;
+  font-size: 15px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+nav a:hover {
+  background-color: #2f855a;
+  transform: scale(1.05);
+}
+
+/* === CONTEÚDO PRINCIPAL === */
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #08807e;
+  margin-top: 30px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+ul {
+  font-size: 18px;
+  margin-left: 20px;
+  line-height: 1.6;
+}
+
+li {
+  margin-bottom: 12px;
+}
+
+.destaque {
+  font-weight: bold;
+  color: #1e8698;
+}
+
+.subtitulo-destaque {
+  font-size: 32px;
+  color: #0ea8bc;
+  margin: 40px 0 20px;
+  padding: 12px 16px;
+  border-left: 6px solid #259ba4;
+  background-color: #d1f7fc;
+  border-radius: 8px;
+  animation: aparecer 1.2s ease-out forwards;
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+/* === RODAPÉ === */
+footer {
+  background-color: #0b5f2f;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* === ANIMAÇÕES === */
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === INTRO COM FUNDO PRETO === */
+#intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: opacity 1s ease;
+  color: #72ff71;
+}
+
+.intro-title {
+  color: #38a169;
+  font-size: 48px;
+  font-family: 'Fredoka', sans-serif;
+  animation: fadeIn 1.5s ease-out forwards;
+  opacity: 0;
+}
+
+.site {
+  display: none;
+}
+body:not(.skip-intro) #intro {
+  display: flex;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.imagem-centralizada {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.imagem-centralizada img {
+  width: 400px;
+  max-width: 500px;
+  height: auto;
+  display: inline-block;
+  border-radius: 10px; 
+}
+
+ul {
+  padding-left: 20px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+table,th,td {
+  border: 1px solid #4f8b87;
+}
+th,td {
+  padding: 10px;
+  text-align: center;
+}
+th {
+  background-color: #8ec9d5;
+}
+
+
+
+
+/* Estilo do bloco "Saiba mais" */
+
+
+.saiba-mais-btn {
+ background-color: #c4e4e3;
+  color: rgb(71, 65, 65);
+  border: none;
+  padding: 12px 20px;
+  font-size: 17px;
+  font-weight: bold;
+  width: 100%;
+  text-align: left;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.saiba-mais-btn:hover {
+  background-color: #c8e6e6;
+}
+
+.saiba-mais-btn .seta {
+  float: right;
+  transition: transform 0.3s ease;
+}
+
+.saiba-mais-btn.ativo .seta {
+  transform: rotate(180deg);
+}
+
+.saiba-mais-texto {
+  display: none;
+  margin-top: 15px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+.saiba-mais-btn {
+ 
+  color: rgb(71, 65, 65);
+  border: none;
+  padding: 12px 20px;
+  font-size: 17px;
+  font-weight: bold;
+  width: 100%;
+  text-align: left;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.saiba-mais-btn:hover {
+  background-color: #c8e6e6;
+}
+
+.saiba-mais-btn .seta {
+  float: right;
+  transition: transform 0.3s ease;
+}
+
+.saiba-mais-btn.ativo .seta {
+  transform: rotate(180deg);
+}
+
+.saiba-mais-texto {
+  display: none;
+  margin-top: 15px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+.tooltip {
+  position: relative;
+  cursor: pointer;
+  color: #3b5a59;
+  font-weight: bold;
+  
+}
+
+.tooltip-box {
+  visibility: hidden;
+  width: 250px;
+  background-color: #ffffff;
+  color: #2f4f4f;
+  text-align: left;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  position: absolute;
+  z-index: 100;
+  top: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tooltip:hover .tooltip-box {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip-box img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+
+
+
+
+/* === CARDS DE CURIOSIDADES === */
+.curiosidade-card {
+  background-color: #d1f7fc;
+  border-left: 6px solid #259ba4;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.curiosidade-card h3 {
+  color: #08807e;
+  margin-bottom: 8px;
+}
+
+.curiosidade-card p {
+  font-size: 17px;
+  color: #2f4f4f;
+}
+
+.curiosidade-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+
+/* === Imagens pequenas para curiosidades === */
+.curiosidade-img {
+  width: 400px;          
+  height: auto;           
+  border-radius: 8px;     
+  margin-top: 10px;       
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15); 
+  display: block;         
+}
+
+.curiosidade-card img.curiosidade-img {
+  margin-left: auto;   
+  margin-right: auto;
+}
