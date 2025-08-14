@@ -417,5 +417,28 @@ th {
   max-height: 500px;
   padding: 10px;
 }
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(to bottom, #000000, #328286); /* exemplo de verde suave */
+  background-attachment: fixed; /* mantém o degradê fixo */
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.conteudo {
+  flex: 1;
+}
+.site-footer {
+  background-color: transparent; /* fundo totalmente transparente */
+  color: white;                  /* cor do texto */
+}
 
 
