@@ -188,13 +188,6 @@ th,td {
 th {
   background-color: #8ec9d5;
 }
-
-
-
-
-/* Estilo do bloco "Saiba mais" */
-
-
 .saiba-mais-btn {
  background-color: #c4e4e3;
   color: rgb(71, 65, 65);
@@ -389,4 +382,45 @@ th {
   opacity: 0;
   pointer-events: none;
 }
+
+.sobre {
+  max-width: 800px;
+  margin: auto;
+}
+
+.sobre-item {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  margin-bottom: 10px; /* Espaço entre uma pergunta e outra */
+}
+
+.sobre-question {
+  cursor: pointer;
+  padding: 10px;
+  background-color:  #87c5c9;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+  background-color: #d4efdf;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+  padding: 0 10px;
+  background-color: #ffffff;
+}
+
+.faq-answer.open {
+  max-height: 500px; /* controla altura para animação */
+  padding: 10px;
+}
+
 

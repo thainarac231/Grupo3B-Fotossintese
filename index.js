@@ -10,3 +10,15 @@ window.addEventListener("load", () => {
     }, 1000); // espera o fade-out terminar
   }, 2000); // tempo que a intro fica (2 segundos)
 });
+
+// Seleciona todos os botões de pergunta
+const questions = document.querySelectorAll('.sobre-question');
+
+questions.forEach(q => {
+  q.addEventListener('click', () => {
+    const answer = q.nextElementSibling;
+
+    // Alterna a classe "open" para mostrar/ocultar resposta
+    answer.classList.toggle('open');
+  });
+});
