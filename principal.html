@@ -56,6 +56,43 @@
       <li><span class="destaque">Ajuda a controlar o gás carbônico:</span> As plantas reduzem o CO₂ do ar, ajudando no equilíbrio do clima.</li>
       <li><span class="destaque">Garante a vida nos ecossistemas:</span> Sustenta florestas, oceanos e a vida no planeta.</li>
     </ul>
+    <section>
+  <p>
+    Este simulador interativo foi criado para demonstrar como diferentes fatores ambientais influenciam a taxa de
+     fotossíntese nas plantas. A fotossíntese é o processo pelo qual as plantas convertem luz solar, água e dióxido 
+     de carbono (CO₂) em energia química, liberando oxigênio como subproduto.
+  </p>
+  <p>
+    No simulador, você pode ajustar três variáveis principais:
+  </p>
+  <ul>
+    <li><strong>Luz Solar:</strong> Representa a intensidade da luz disponível para a planta.</li>
+    <li><strong>Água:</strong> Indica a quantidade de água absorvida pelas raízes.</li>
+    <li><strong>Dióxido de Carbono:</strong> Reflete a concentração de gás carbônico no ambiente.</li>
+  </ul>
+</section>
+    
+  <div class="slider-container">
+    <label>Luz Solar ☀️</label>
+    <input type="range" id="light" min="0" max="100" value="50">
+  </div>
+
+  <div class="slider-container">
+    <label>Água 💧</label>
+    <input type="range" id="water" min="0" max="100" value="50">
+  </div>
+
+  <div class="slider-container">
+    <label>Dióxido de Carbono (CO₂) 🌬️</label>
+    <input type="range" id="co2" min="0" max="100" value="50">
+  </div>
+
+  <div id="result">
+    <h2>Taxa de Fotossíntese: <span id="rate">0%</span></h2>
+    <div class="bar">
+      <div class="fill" id="fill-bar"></div>
+    </div>
+  </div>
     </div>
   </main>
 
