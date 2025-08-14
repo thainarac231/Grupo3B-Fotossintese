@@ -65,3 +65,55 @@ co2.addEventListener('input', handleSliderInput);
 
 // Inicializa ao carregar
 handleSliderInput();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ======== Tema claro/escuro com persistência ========
+const root = document.documentElement;
+const btnTema = document.getElementById('toggle-tema');
+
+// pega preferência salva ou do SO (opcional)
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const savedTheme = localStorage.getItem('tema');
+const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+root.setAttribute('data-theme', initialTheme);
+if (btnTema) {
+  btnTema.setAttribute('aria-pressed', initialTheme === 'dark');
+  btnTema.querySelector('.icon').textContent = initialTheme === 'dark' ? '🌙' : '☀️';
+}
+
+btnTema?.addEventListener('click', ()=>{
+  const current = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  root.setAttribute('data-theme', current);
+  localStorage.setItem('tema', current);
+  btnTema.setAttribute('aria-pressed', current === 'dark');
+  btnTema.querySelector('.icon').textContent = current === 'dark' ? '🌙' : '☀️';
+});
+
+// ======== Link ativo no menu (auto) ========
+(function highlightActiveLink() {
+  const here = location.pathname.split('/').pop() || 'principal.html';
+  document.querySelectorAll('.site-nav a').forEach(a=>{
+    const href = a.getAttribute('href');
+    if (href === here) {
+      a.classList.add('active');
+      a.setAttribute('aria-current','page');
+    }
+  });
+})();
