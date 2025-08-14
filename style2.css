@@ -1,4 +1,4 @@
-/* === GERAL === */
+
 body {
   margin: 0;
   padding: 0;
@@ -7,7 +7,7 @@ body {
   color: #2f4f4f;
 }
 
-/* === CABEÇALHO === */
+
 header {
   background-image: url('fundo-cabecalho.jpg.jpeg');
   background-size: cover;
@@ -308,10 +308,6 @@ th {
   margin-bottom: 8px;
 }
 
-
-
-
-/* === CARDS DE CURIOSIDADES === */
 .curiosidade-card {
   background-color: #d1f7fc;
   border-left: 6px solid #259ba4;
@@ -338,7 +334,7 @@ th {
 }
 
 
-/* === Imagens pequenas para curiosidades === */
+
 .curiosidade-img {
   width: 400px;          
   height: auto;           
@@ -367,13 +363,12 @@ th {
 #intro h1 {
   font-family: 'Bebas Neue', sans-serif;
   letter-spacing: 2px;
-  font-size: 5rem; /* tamanho grande para destacar */
+  font-size: 5rem;
   color: white;
   text-align: center;
   animation: fadeIn 1s ease-in-out;
 }
 
-/* Animação suave de entrada */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -391,13 +386,13 @@ th {
 .sobre-item {
   border-bottom: 1px solid #ccc;
   padding: 10px 0;
-  margin-bottom: 10px; /* Espaço entre uma pergunta e outra */
+  margin-bottom: 10px;
 }
 
 .sobre-question {
   cursor: pointer;
   padding: 10px;
-  background-color:  #87c5c9;
+  background-color:  #9fd9dd;
   border: none;
   width: 100%;
   text-align: left;
@@ -419,7 +414,7 @@ th {
 }
 
 .faq-answer.open {
-  max-height: 500px; /* controla altura para animação */
+  max-height: 500px;
   padding: 10px;
 }
 
