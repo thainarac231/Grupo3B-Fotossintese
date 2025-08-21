@@ -512,3 +512,67 @@ input[type="range"]::-moz-range-thumb {
 
 
 
+:root{
+  --radius: 14px;
+  --shadow: 0 6px 22px rgba(0,0,0,.08);
+  --border: 1px solid rgba(0,0,0,.08);
+  --acc-primary: #34c759;
+}
+
+.wrapper{ min-height:100dvh; display:flex; flex-direction:column }
+.container{ flex:1 }
+
+
+.toolbar{
+  display:grid; gap:.6rem;
+  grid-template-columns: 1fr auto auto;
+  align-items:center;
+  margin:1rem 0 1.25rem;
+}
+.toolbar input[type="search"]{
+  padding:.7rem .9rem;border:var(--border);border-radius:12px;font-size:1rem;
+  box-shadow: var(--shadow);
+}
+.toolbar button{
+  padding:.7rem .9rem;border:0;border-radius:12px;cursor:pointer;
+  background: var(--acc-primary); color:#fff; box-shadow: var(--shadow);
+}
+.toolbar .ghost{ background:#fff;color:#111;border:var(--border) }
+.badge-count{ font-size:.92rem; opacity:.85; grid-column:1/-1 }
+
+.sobre-item{
+  background:#fff;border:var(--border);border-radius: var(--radius);
+  box-shadow: var(--shadow); overflow:hidden; margin-top:.7rem;
+}
+.sobre-question{
+  width:100%; text-align:left; cursor:pointer; background:transparent; border:0;
+  padding:1rem; font-size:1.02rem; line-height:1.35;
+  display:flex; align-items:center; gap:.7rem;
+}
+.icon{ width:18px; height:18px; flex:0 0 18px; transition: transform .26s ease }
+.sobre-question[aria-expanded="true"] .icon{ transform: rotate(180deg) }
+
+.panel{
+  height:0; overflow:hidden;
+  transition: height .28s ease, opacity .22s ease;
+  opacity:0; will-change: height;
+}
+.panel.open{ opacity:1 }
+.panel-inner{ padding: .5rem 1rem 1rem }
+.panel mark{ background: #fff3a8; padding:0 .15em; border-radius:3px }
+
+.no-results{
+  display:none; padding:1rem; text-align:center; border:var(--border); border-radius:var(--radius);
+  background:#fff; box-shadow:var(--shadow); margin-top:.5rem
+}
+.no-results.show{ display:block }
+
+.site-footer{ padding:1rem; background:#fff; border-top:var(--border) }
+
+@media (prefers-reduced-motion: reduce){
+  .panel, .icon{ transition:none }
+}
+/* esconde itens filtrados pela busca */
+.hidden-by-filter { 
+  display: none !important; 
+}
