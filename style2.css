@@ -105,14 +105,6 @@ li {
   transform: translateX(-20px);
 }
 
-/* === RODAPÉ === */
-footer {
-  background-color: #0b5f2f;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
 
 /* === ANIMAÇÕES === */
 @keyframes aparecer {
@@ -436,11 +428,6 @@ body {
 .conteudo {
   flex: 1;
 }
-.site-footer {
-  background-color: transparent; /* fundo totalmente transparente */
-  color: rgb(252, 250, 250);                  /* cor do texto */
-}
-
 .slider-container {
   margin: 20px 0;
 }
@@ -500,18 +487,6 @@ input[type="range"]::-moz-range-thumb {
   cursor: pointer;
   border: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 :root{
   --radius: 14px;
   --shadow: 0 6px 22px rgba(0,0,0,.08);
@@ -567,12 +542,197 @@ input[type="range"]::-moz-range-thumb {
 }
 .no-results.show{ display:block }
 
-.site-footer{ padding:1rem; background:#fff; border-top:var(--border) }
-
 @media (prefers-reduced-motion: reduce){
   .panel, .icon{ transition:none }
 }
 /* esconde itens filtrados pela busca */
 .hidden-by-filter { 
   display: none !important; 
+}
+.videofoto {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+video{
+  max-width: 100%;
+  border-radius: 8px;
+}
+/* Linha do tempo */
+.timeline {
+  position: relative;
+  margin: 20px 0;
+  padding: 0 20px;
+  border-left: 3px solid #328286;
+}
+
+.timeline-item {
+  margin: 20px 0;
+  padding-left: 15px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "●";
+  color: #328286;
+  font-size: 20px;
+  position: absolute;
+  left: -12px;
+  top: 0;
+}
+
+.timeline-item h3 {
+  margin: 0;
+  color: #328286;
+  font-size: 1.2em;
+}
+
+.timeline-item p {
+  margin: 5px 0 0;
+  color: #444;
+}
+/* --- CENÁRIO --- */
+.scene {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(to top, #a5d6a7 50%, #e3f2fd 50%);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Sol */
+.sun {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 80px;
+  height: 80px;
+  background: #ffeb3b;
+  border-radius: 50%;
+  box-shadow: 0 0 30px rgba(255, 235, 59, 0.8);
+  animation: glow 3s infinite alternate;
+}
+
+/* Raios do Sol */
+.sun .ray {
+  position: absolute;
+  width: 6px;
+  height: 25px;
+  background: #ffeb3b;
+  top: -25px;
+  left: 37px;
+  transform-origin: center bottom;
+  animation: spin 6s linear infinite;
+}
+
+.sun .ray:nth-child(2) { transform: rotate(45deg) translateY(-25px); }
+.sun .ray:nth-child(3) { transform: rotate(90deg) translateY(-25px); }
+.sun .ray:nth-child(4) { transform: rotate(135deg) translateY(-25px); }
+.sun .ray:nth-child(5) { transform: rotate(180deg) translateY(-25px); }
+.sun .ray:nth-child(6) { transform: rotate(225deg) translateY(-25px); }
+.sun .ray:nth-child(7) { transform: rotate(270deg) translateY(-25px); }
+.sun .ray:nth-child(8) { transform: rotate(315deg) translateY(-25px); }
+
+/* Planta */
+.plant-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 250px;
+}
+
+/* Caule */
+.stem {
+  width: 8px;
+  height: 0;
+  background: #2e7d32;
+  margin: 0 auto;
+  border-radius: 5px;
+  animation: growStem 3s forwards;
+}
+
+/* Folhas */
+.leaf {
+  width: 40px;
+  height: 20px;
+  background: #388e3c;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0;
+}
+
+.leaf1 { left: -35px; top: 50px; transform: rotate(-30deg); animation: growLeaf 1.5s 2s forwards; }
+.leaf2 { right: -35px; top: 90px; transform: rotate(30deg); animation: growLeaf 1.5s 3s forwards; }
+.leaf3 { left: -35px; top: 130px; transform: rotate(-20deg); animation: growLeaf 1.5s 4s forwards; }
+.leaf4 { right: -35px; top: 170px; transform: rotate(20deg); animation: growLeaf 1.5s 5s forwards; }
+
+/* Flor */
+.flower {
+  width: 30px;
+  height: 30px;
+  background: #f50057;
+  border-radius: 50%;
+  position: absolute;
+  top: -15px;
+  left: 35px;
+  opacity: 0;
+  animation: bloom 2s 6s forwards;
+  box-shadow: 0 0 15px rgba(245, 0, 87, 0.5);
+}
+
+/* --- ANIMAÇÕES --- */
+@keyframes growStem {
+  from { height: 0; }
+  to { height: 200px; }
+}
+
+@keyframes growLeaf {
+  from { opacity: 0; transform: scale(0) rotate(0deg); }
+  to { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+
+@keyframes bloom {
+  from { opacity: 0; transform: scale(0); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 10px rgba(255, 235, 59, 0.4); }
+  to { box-shadow: 0 0 40px rgba(255, 235, 59, 1); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg) translateY(-25px); }
+  to { transform: rotate(360deg) translateY(-25px); }
+}
+
+site-footer {
+  display: inline-block;          /* permite centralizar com margin auto */
+  background: transparent;        /* fundo transparente */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin: 30px auto 0 auto;      /* centraliza horizontalmente */
+  font-size: 14px;
+  line-height: 1.5;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+.site-footer a {
+  color: white;                   /* cor dos links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+  color: #88f1ff;                 /* cor ao passar o mouse */
+  text-decoration: underline;
+}
+
+.site-footer .footer-info,
+.site-footer .footer-links,
+.site-footer .footer-note {
+  margin: 5px 0;                  /* espaçamento entre as linhas */
 }
