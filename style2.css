@@ -558,6 +558,11 @@ video{
   max-width: 100%;
   border-radius: 8px;
 }
+.videofotos {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
 /* Linha do tempo */
 .timeline {
   position: relative;
@@ -591,132 +596,15 @@ video{
   margin: 5px 0 0;
   color: #444;
 }
-/* --- CENÁRIO --- */
-.scene {
-  position: relative;
-  width: 100%;
-  height: 400px;
-  background: linear-gradient(to top, #a5d6a7 50%, #e3f2fd 50%);
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-/* Sol */
-.sun {
-  position: absolute;
-  top: 40px;
-  right: 40px;
-  width: 80px;
-  height: 80px;
-  background: #ffeb3b;
-  border-radius: 50%;
-  box-shadow: 0 0 30px rgba(255, 235, 59, 0.8);
-  animation: glow 3s infinite alternate;
-}
-
-/* Raios do Sol */
-.sun .ray {
-  position: absolute;
-  width: 6px;
-  height: 25px;
-  background: #ffeb3b;
-  top: -25px;
-  left: 37px;
-  transform-origin: center bottom;
-  animation: spin 6s linear infinite;
-}
-
-.sun .ray:nth-child(2) { transform: rotate(45deg) translateY(-25px); }
-.sun .ray:nth-child(3) { transform: rotate(90deg) translateY(-25px); }
-.sun .ray:nth-child(4) { transform: rotate(135deg) translateY(-25px); }
-.sun .ray:nth-child(5) { transform: rotate(180deg) translateY(-25px); }
-.sun .ray:nth-child(6) { transform: rotate(225deg) translateY(-25px); }
-.sun .ray:nth-child(7) { transform: rotate(270deg) translateY(-25px); }
-.sun .ray:nth-child(8) { transform: rotate(315deg) translateY(-25px); }
-
-/* Planta */
-.plant-container {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 250px;
-}
-
-/* Caule */
-.stem {
-  width: 8px;
-  height: 0;
-  background: #2e7d32;
-  margin: 0 auto;
-  border-radius: 5px;
-  animation: growStem 3s forwards;
-}
-
-/* Folhas */
-.leaf {
-  width: 40px;
-  height: 20px;
-  background: #388e3c;
-  border-radius: 50%;
-  position: absolute;
-  opacity: 0;
-}
-
-.leaf1 { left: -35px; top: 50px; transform: rotate(-30deg); animation: growLeaf 1.5s 2s forwards; }
-.leaf2 { right: -35px; top: 90px; transform: rotate(30deg); animation: growLeaf 1.5s 3s forwards; }
-.leaf3 { left: -35px; top: 130px; transform: rotate(-20deg); animation: growLeaf 1.5s 4s forwards; }
-.leaf4 { right: -35px; top: 170px; transform: rotate(20deg); animation: growLeaf 1.5s 5s forwards; }
-
-/* Flor */
-.flower {
-  width: 30px;
-  height: 30px;
-  background: #f50057;
-  border-radius: 50%;
-  position: absolute;
-  top: -15px;
-  left: 35px;
-  opacity: 0;
-  animation: bloom 2s 6s forwards;
-  box-shadow: 0 0 15px rgba(245, 0, 87, 0.5);
-}
-
-/* --- ANIMAÇÕES --- */
-@keyframes growStem {
-  from { height: 0; }
-  to { height: 200px; }
-}
-
-@keyframes growLeaf {
-  from { opacity: 0; transform: scale(0) rotate(0deg); }
-  to { opacity: 1; transform: scale(1) rotate(0deg); }
-}
-
-@keyframes bloom {
-  from { opacity: 0; transform: scale(0); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-@keyframes glow {
-  from { box-shadow: 0 0 10px rgba(255, 235, 59, 0.4); }
-  to { box-shadow: 0 0 40px rgba(255, 235, 59, 1); }
-}
-
-@keyframes spin {
-  from { transform: rotate(0deg) translateY(-25px); }
-  to { transform: rotate(360deg) translateY(-25px); }
-}
 
 .site-footer {
-  display: flex;                 /* usar flex para centralizar conteúdo */
-  flex-direction: column;        /* empilha os itens verticalmente */
-  align-items: center;           /* centraliza horizontalmente */
-  justify-content: center;       /* centraliza verticalmente, se necessário */
-  background: transparent;       /* fundo transparente */
-  color: white;                  /* cor do texto */
-  text-align: center;            /* garante que o texto fique centralizado */
+  display: flex;               
+  flex-direction: column;      
+  align-items: center;          
+  justify-content: center;       
+  background: transparent;      
+  color: white;             
+  text-align: center;        
   padding: 20px;
   font-size: 14px;
   line-height: 1.5;
@@ -738,4 +626,83 @@ video{
 .site-footer .footer-links,
 .site-footer .footer-note {
   margin: 5px 0;
+}
+
+/* Container da planta */
+.plant-container {
+  position: relative;
+  width: 80px;   /* menor largura */
+  height: 160px; /* menor altura */
+  margin: 30px;  /* agora não fica no centro, você pode ajustar */
+  animation: grow 3s ease-in-out forwards;
+}
+
+/* Caule */
+.stem {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 6px;
+  height: 110px;
+  background: green;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+
+/* Folhas */
+.leaf {
+  position: absolute;
+  bottom: 50px;
+  width: 35px;
+  height: 18px;
+  background: green;
+  border-radius: 50%;
+}
+
+.leaf.left {
+  left: -28px;
+  transform: rotate(-25deg);
+}
+
+.leaf.right {
+  right: -28px;
+  transform: rotate(25deg);
+}
+
+/* Flor */
+.flower {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.petal {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background: pink;
+  border-radius: 50%;
+}
+
+.petal1 { top: -18px; left: 0; }
+.petal2 { top: 7px; left: -18px; }
+.petal3 { top: 7px; left: 18px; }
+.petal4 { top: 30px; left: 0; }
+
+/* Centro da flor */
+.center {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  background: yellow;
+  border-radius: 50%;
+}
+
+/* Animação crescendo */
+@keyframes grow {
+  from { transform: scale(0); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
