@@ -709,30 +709,33 @@ video{
   to { transform: rotate(360deg) translateY(-25px); }
 }
 
-site-footer {
-  display: inline-block;          /* permite centralizar com margin auto */
-  background: transparent;        /* fundo transparente */
-  color: white;
-  text-align: center;
+.site-footer {
+  display: flex;                 /* usar flex para centralizar conteúdo */
+  flex-direction: column;        /* empilha os itens verticalmente */
+  align-items: center;           /* centraliza horizontalmente */
+  justify-content: center;       /* centraliza verticalmente, se necessário */
+  background: transparent;       /* fundo transparente */
+  color: white;                  /* cor do texto */
+  text-align: center;            /* garante que o texto fique centralizado */
   padding: 20px;
-  margin: 30px auto 0 auto;      /* centraliza horizontalmente */
   font-size: 14px;
   line-height: 1.5;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
 }
+
 .site-footer a {
-  color: white;                   /* cor dos links */
+  color: white;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .site-footer a:hover {
-  color: #88f1ff;                 /* cor ao passar o mouse */
+  color: #88f1ff;
   text-decoration: underline;
 }
 
 .site-footer .footer-info,
 .site-footer .footer-links,
 .site-footer .footer-note {
-  margin: 5px 0;                  /* espaçamento entre as linhas */
+  margin: 5px 0;
 }
