@@ -99,19 +99,6 @@ li {
   transform: translateX(-20px);
 }
 
-/* === RODAPÉ === */
-footer {
-  background: linear-gradient(to right, #4caf50, #81c784); /* Degradê verde */
-  color: white; /* Texto branco */
-  padding: 20px;
-  text-align: center;
-  border-radius: 20px 20px 0 0; /* Bordas arredondadas no topo */
-  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
-  font-size: 18px;
-  font-family: 'Arial', sans-serif;
-}
-
-
 @keyframes aparecer {
   to {
     opacity: 1;
