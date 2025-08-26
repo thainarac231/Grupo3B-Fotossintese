@@ -706,3 +706,44 @@ video{
   from { transform: scale(0); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+
+
+
+
+
+
+
+/* --- Estilo para seção de Referências --- */
+section ul {
+  list-style: none;       /* tira as bolinhas */
+  padding: 0;
+}
+
+section ul li {
+  margin: 10px 0;
+}
+
+section ul li a {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background: #f3f3f3;
+  color: #2a7a2e;             /* verde suave */
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+section ul li a:hover {
+  background: #2a7a2e;        /* fundo verde */
+  color: #fff;                /* texto branco */
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Efeito ao clicar */
+section ul li a:active {
+  transform: scale(0.97);
+}
