@@ -1,151 +1,172 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fotossíntese</title>
-    <link rel="stylesheet" href="style2.css">
-    <link rel="icon" href="img/logo.webp" type="image/jpg"
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fotossíntese</title>
+  <link rel="stylesheet" href="style2.css" />
+  <link rel="icon" href="img/logo.webp" type="image/jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
 </head>
 
 <body>
   <div class="wrapper">
-  <div id="intro">
-  <h1>Fotossíntese</h1>
-</div>
-<div id="site" style="display: none;">
 
-  <header>
-    <h1 class="titulo-principal">
-   <span class="ddverde">Importância da Fotossíntese</span>
-     <nav>
-      <a href="principal.html">Início</a>
-      <a href="importancia.html">Importância</a>
-      <a href="formula.html">Fórmula</a> 
-      <a href="fase-clara.html">Fase Clara</a>
-      <a href="fase-escura.html">Fase Escura</a>
-      <a href="curiosidades.html">Curiosidades</a>
-      <a href="sobre.html">Sobre</a>
-    </nav>
-    </header>
-    
-    <main class="conteudo">
-  <div class="container">
-    
-    <p>
-      A <span class="destaque">fotossíntese</span> é o processo natural que as plantas, algas e algumas bactérias usam para produzir o próprio alimento. Esse processo acontece principalmente nas folhas, com a ajuda de uma substância chamada <span class="destaque">clorofila</span>, que dá a cor verde às plantas.
-    </p>
-
-    <p>
-      Durante a fotossíntese, as plantas capturam a luz do sol, absorvem gás carbônico (CO₂) do ar e água (H₂O) do solo. Com esses ingredientes, elas produzem <span class="destaque">glicose</span>, um tipo de açúcar que serve de energia, e liberam <span class="destaque">oxigênio (O₂)</span> no ar, essencial para a vida de todos os seres vivos.
-    </p>
-
-    <p>
-      A fotossíntese é um dos processos mais importantes da natureza e garante a vida na Terra como a conhecemos.
-    </p>
-
-    <div class="imagem-ilustrativa">
   
-  <div class="slider-container">
-    <label>Luz Solar ☀️</label>
-    <input type="range" id="light" min="0" max="100" value="50">
-  </div>
-
-  <div class="slider-container">
-    <label>Água 💧</label>
-    <input type="range" id="water" min="0" max="100" value="50">
-  </div>
-
-  <div class="slider-container">
-    <label>Dióxido de Carbono (CO₂) 🌬️</label>
-    <input type="range" id="co2" min="0" max="100" value="50">
-  </div>
-
-  <div id="result">
-    <h2>Taxa de Fotossíntese: <span id="rate">0%</span></h2>
-    <div class="bar">
-      <div class="fill" id="fill-bar"></div>
+    <div id="intro">
+      <h1>Fotossíntese</h1>
     </div>
-  </div>
-  <section>
-  <p>
-    Este simulador interativo foi criado para demonstrar como diferentes fatores ambientais influenciam a taxa de
-     fotossíntese nas plantas. A fotossíntese é o processo pelo qual as plantas convertem luz solar, água e dióxido 
-     de carbono (CO₂) em energia química, liberando oxigênio como subproduto.
-  </p>
-  <p>
-    No simulador, você pode ajustar três variáveis principais:
-  </p>
-  <ul>
-    <li><strong>Luz Solar:</strong> Representa a intensidade da luz disponível para a planta.</li>
-    <li><strong>Água:</strong> Indica a quantidade de água absorvida pelas raízes.</li>
-    <li><strong>Dióxido de Carbono:</strong> Reflete a concentração de gás carbônico no ambiente.</li>
-  </ul>
-  <p>
-    Conforme você altera os controles deslizantes, a taxa de fotossíntese é recalculada em tempo real. 
-    Isso permite visualizar como o equilíbrio entre esses elementos é essencial para o funcionamento saudável das
-     plantas.
-  </p>
-  <section>
-  <h2>A Importância da Água, da Luz Solar e do Dióxido de Carbono</h2>
 
-  <p>
-    A vida das plantas depende de três elementos fundamentais: <strong>água</strong>, <strong>luz solar</strong> e <strong>dióxido de carbono (CO₂)</strong>. Juntos, eles tornam possível o processo de <em>fotossíntese</em>, que é essencial para a produção de energia e para a manutenção da vida na Terra.
-  </p>
+   
+    <div id="site" style="display: none;">
+      <header>
+        <h1 class="titulo-principal">
+          <span class="ddverde">Fotossíntese</span>
+        </h1>
+        <nav>
+          <a href="principal.html">Início</a>
+          <a href="importancia.html">Importância</a>
+          <a href="formula.html">Fórmula</a>
+          <a href="fase-clara.html">Fase Clara</a>
+          <a href="fase-escura.html">Fase Escura</a>
+          <a href="curiosidades.html">Curiosidades</a>
+          <a href="sobre.html">Sobre</a>
+        </nav>
+      </header>
 
-  <h3>Água</h3>
-  <p>
-    A água é absorvida pelas raízes das plantas e transportada até as folhas. Lá, ela participa da fotossíntese, reagindo com o dióxido de carbono para formar glicose, que serve como fonte de energia para a planta. Além disso, a água ajuda a manter a estrutura celular e regula a temperatura interna da planta.
-  </p>
+      <main class="conteudo">
+        <div class="container">
 
-  <h3>Luz Solar</h3>
-  <p>
-    A luz solar fornece a energia necessária para que a fotossíntese ocorra. Quando a luz atinge as folhas, ela ativa os cloroplastos, que convertem a energia luminosa em energia química. Sem luz solar, as plantas não conseguem produzir alimento nem liberar oxigênio.
-  </p>
+          <section>
+            <p>
+              A <span class="destaque">fotossíntese</span> é o processo natural que as plantas, algas e algumas bactérias usam para
+              produzir o próprio alimento. Esse processo acontece principalmente nas folhas, com a ajuda da
+              <span class="destaque">clorofila</span>, que dá a cor verde às plantas.
+            </p>
 
-  <h3>Dióxido de Carbono (CO₂)</h3>
-  <p>
-    O dióxido de carbono é captado pelas folhas através de pequenos poros chamados estômatos. Durante a fotossíntese, o CO₂ reage com a água, formando glicose e liberando oxigênio como subproduto. Esse processo é vital não apenas para as plantas, mas para todos os seres vivos que dependem do oxigênio.
-  </p>
+            <p>
+              Durante a fotossíntese, as plantas capturam a luz do sol, absorvem gás carbônico (CO₂) do ar e água (H₂O) do solo.
+              Com esses ingredientes, elas produzem <span class="destaque">glicose</span>, um tipo de açúcar que serve de energia,
+              e liberam <span class="destaque">oxigênio (O₂)</span> no ar, essencial para a vida de todos os seres vivos.
+            </p>
 
-  <p>
-    Portanto, a interação entre água, luz solar e dióxido de carbono é o que sustenta a vida vegetal e, por consequência, toda a cadeia alimentar e o equilíbrio ecológico do planeta.
-  </p>
-  <h2>Este e um video Explicando um pouco mais sobre a fotossintese🌱</h2>
-  <div class="videofotos">
-  <video controls width="600">
-  <source src="video/fotossi2.mp4" type="video/mp4">
-  Seu navegador não suporta vídeos.
-   </video>
-  </div>
-  
-  </section>
-</section>
-</section>
+            <p>
+              A fotossíntese é um dos processos mais importantes da natureza e garante a vida na Terra como a conhecemos.
+            </p>
+          </section>
+
+       
+          <section class="imagem-ilustrativa">
+            <div class="slider-container">
+              <label for="light">Luz Solar ☀️</label>
+              <input type="range" id="light" min="0" max="100" value="50" />
+            </div>
+
+            <div class="slider-container">
+              <label for="water">Água 💧</label>
+              <input type="range" id="water" min="0" max="100" value="50" />
+            </div>
+
+            <div class="slider-container">
+              <label for="co2">Dióxido de Carbono (CO₂) 🌬️</label>
+              <input type="range" id="co2" min="0" max="100" value="50" />
+            </div>
+
+            <div id="result">
+              <h2>Taxa de Fotossíntese: <span id="rate">0%</span></h2>
+              <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Taxa de Fotossíntese">
+                <div class="fill" id="fill-bar"></div>
+              </div>
+            </div>
+          </section>
+
+    
+          <section>
+            <p>
+              Este simulador interativo foi criado para demonstrar como diferentes fatores ambientais influenciam a taxa de
+              fotossíntese nas plantas. A fotossíntese é o processo pelo qual as plantas convertem luz solar, água e dióxido de
+              carbono (CO₂) em energia química, liberando oxigênio como subproduto.
+            </p>
+            <p>No simulador, você pode ajustar três variáveis principais:</p>
+            <ul>
+              <li><strong>Luz Solar:</strong> Representa a intensidade da luz disponível para a planta.</li>
+              <li><strong>Água:</strong> Indica a quantidade de água absorvida pelas raízes.</li>
+              <li><strong>Dióxido de Carbono:</strong> Reflete a concentração de gás carbônico no ambiente.</li>
+            </ul>
+            <p>
+              Conforme você altera os controles deslizantes, a taxa de fotossíntese é recalculada em tempo real. Isso permite
+              visualizar como o equilíbrio entre esses elementos é essencial para o funcionamento saudável das plantas.
+            </p>
+          </section>
+
+          
+          <section>
+            <h2>A importância da Água, da Luz Solar e do Dióxido de Carbono</h2>
+
+            <h3>Água</h3>
+            <p>
+              A água é absorvida pelas raízes das plantas e transportada até as folhas. Lá, ela participa da fotossíntese,
+              reagindo com o dióxido de carbono para formar glicose, que serve como fonte de energia para a planta. Além disso,
+              a água ajuda a manter a estrutura celular e regula a temperatura interna da planta.
+            </p>
+
+            <h3>Luz Solar</h3>
+            <p>
+              A luz solar fornece a energia necessária para que a fotossíntese ocorra. Quando a luz atinge as folhas, ela ativa
+              os cloroplastos, que convertem a energia luminosa em energia química. Sem luz solar, as plantas não conseguem
+              produzir alimento nem liberar oxigênio.
+            </p>
+
+            <h3>Dióxido de Carbono (CO₂)</h3>
+            <p>
+              O dióxido de carbono é captado pelas folhas através de pequenos poros chamados estômatos. Durante a fotossíntese,
+              o CO₂ reage com a água, formando glicose e liberando oxigênio como subproduto. Esse processo é vital não apenas
+              para as plantas, mas para todos os seres vivos que dependem do oxigênio.
+            </p>
+
+            <p>
+              Portanto, a interação entre água, luz solar e dióxido de carbono é o que sustenta a vida vegetal e, por
+              consequência, toda a cadeia alimentar e o equilíbrio ecológico do planeta.
+            </p>
+          </section>
+
+         
+          <section>
+            <h2>Este é um vídeo explicando um pouco mais sobre a fotossíntese 🌱</h2>
+            <div class="videofotos">
+              <video controls width="600">
+                <source src="video/fotossi2.mp4" type="video/mp4" />
+                Seu navegador não suporta vídeos.
+              </video>
+            </div>
+          </section>
+
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-info">
+          <strong>© 2025 Yasmin e Thainara</strong> — Todos os direitos reservados
+        </div>
+
+        <div class="footer-info">
+          Trabalho escolar — ALPW — Fotossíntese
+        </div>
+
+        <div class="footer-links">
+          <a href="principal.html">Home</a> |
+          <a href="formula.html">Fórmula</a> |
+          <a href="curiosidades.html">Curiosidades</a>
+        </div>
+
+        <div class="footer-note">
+          Este site tem fins exclusivamente educativos.
+        </div>
+      </footer>
     </div>
-  </main>
 
-<footer class="site-footer">
-  <div class="footer-info">
-    <strong>© 2025 Yasmin e Thainara</strong> — Todos os direitos reservados
-  </div>
+  </div> 
 
-  <div class="footer-info">
-    Trabalho escolar — ALPW — Fotossíntese
-  </div>
-
-  <div class="footer-links">
-  <a href="principal.html">Home</a> |
-  <a href="formula.html">Fórmula</a> |
-  <a href="curiosidades.html">Curiosidades</a>
-</div>
-
-  <div class="footer-note">
-    Este site tem fins exclusivamente educativos.
-  </div>
-</footer>
- <script src="index.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
