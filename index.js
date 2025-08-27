@@ -71,19 +71,6 @@ handleSliderInput();
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // ======== Tema claro/escuro com persistência ========
 const root = document.documentElement;
 const btnTema = document.getElementById('toggle-tema');
