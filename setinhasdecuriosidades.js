@@ -65,8 +65,8 @@
     btn.addEventListener('click',()=>toggle(pan,btn));
   });
 
-  // ===== CORREÇÃO DA BUSCA =====
-  // Normaliza texto removendo acentos de forma compatível com todos os navegadores
+  
+  
   function norm(input){
     const s = (input || '').toLowerCase();
     try {
